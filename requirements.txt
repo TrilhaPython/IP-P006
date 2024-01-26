@@ -1,0 +1,6 @@
+Para a criação do ambiente virtual foram instalados o pip, o npm e o jupyter notebook.
+Com o VScode, foi possivél iniciar o ambiente virtual através dos comandos: 
+python -m venv env 
+Na pasta do projeto .\env\Scripts\Activate.ps1
+A partir desse momento, o ambiente virtual foi inicializado.
+Os pacores instalados para executar o comandos específicos do ambiente virtual foram NumPy (as np) e Pandas (as pd). Ambos, podem ser vistos no kernel.
