@@ -13,5 +13,5 @@ E-mail: Lasbernardes@uesc.br
 Nome: Matheus Costa Beckerath
 E-mail: matheus.beckerath@hotmail.com
 
-Nome: Paulo Pereira Marques
+Nome: Paulo Pereira Marques.
 E-mail: paulomarques.ufsb@gmail.com
