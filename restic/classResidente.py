@@ -57,7 +57,3 @@ class Residente:
 
         # Adicionando o residente à lista de residentes
         Residente.residentes.append(self)
-
-    def adicionar_residente(self):
-        # Adicionar a lógica para adicionar o residente se necessário
-        pass
