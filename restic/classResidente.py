@@ -1,20 +1,22 @@
-
 class Residente:
     residentes = []  # Lista para armazenar todos os residentes
 
     def __init__(self):
         # Coletando dados do usuário
-        self.turma = input('Digite a turma (Python, Net ou Jav): ').capitalize()
-        self.cpf = input('Digite os 11 dígitos do seu CPF: ')
-    
-        # Verificando CPF
-        while not self.cpf.isdigit() or len(self.cpf) != 11:
-            print('CPF incorreto. Digite novamente.')
-            self.cpf = input('Digite os 11 dígitos do seu CPF: ')
+        trilhas_validas = ['Python', 'Net', 'Jav']
 
-        self.ano_nascimento = input('Digite os 4 dígitos do seu ano de nascimento: ')
+        while True:
+            self.turma = input('Digite a turma (Python, Net ou Jav): ').capitalize()
+
+            if self.turma not in trilhas_validas:
+                print('Trilha incorreta. Tente novamente.')
+            else:
+                break
+
+        self.cpf = input('Digite os 11 dígitos do seu CPF: ')
 
         # Verificando ano de nascimento
+        self.ano_nascimento = input('Digite os 4 dígitos do seu ano de nascimento: ')
         while not self.ano_nascimento.isdigit() or len(self.ano_nascimento) != 4:
             print('O ano de nascimento deve ser no formato aaaa. Digite novamente.')
             self.ano_nascimento = input('Digite os 4 dígitos do seu ano de nascimento: ')
@@ -56,16 +58,6 @@ class Residente:
         # Adicionando o residente à lista de residentes
         Residente.residentes.append(self)
 
-    def adicionar_registro(self):
-        registro = {
-            'Identificador': f'tic18{self.turma}{self.cpf[:3]}{self.ano_nascimento[-2:]}',
-            'Idade': self.idade,
-            'Formacao': self.formacao,
-            'Formacao Geral': self.formacaoGeral,
-            'Formacao Especifica': self.formacaoEspecifica,
-            'Andamento Graduacao': self.andamentoGraduacao,
-            'Tempo de Formado': self.tempoFormacao,
-            'Experiencia Previa': self.experienciaPrevia,
-            'Descricao Experiencia': self.descricaoExperiencia
-        }
-        self.registrosResidentes.append(registro)
+    def adicionar_residente(self):
+        # Adicionar a lógica para adicionar o residente se necessário
+        pass
